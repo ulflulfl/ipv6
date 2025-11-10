@@ -17,7 +17,7 @@ if [ -z $1 ]; then
 fi
 
 # find veth of container
-iflink=`docker exec -it $CONTAINER_NAME bash -c 'cat /sys/class/net/eth0/iflink'`
+iflink=`docker exec -it $CONTAINER_NAME sh -c 'cat /sys/class/net/eth0/iflink'`
 iflink=`echo $iflink|tr -d '\r'`
 veth=`grep -l $iflink /sys/class/net/veth*/ifindex`
 veth=`echo $veth|sed -e 's;^.*net/\(.*\)/ifindex$;\1;'`
