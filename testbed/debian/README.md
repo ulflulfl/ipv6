@@ -89,7 +89,7 @@ root@delle ~/ipv6 #
 ```
 Hint: The container eth0 interface is identical to the veth... interface of the Debian system. As the number in veth6b0bf3e changes every container start, the script finds the current veth number by the container name.
 
-### Start Netcat on alice and call bob
+### Start netcat on alice and call bob
 
 Enter the bash in the container alice by entering `alice` (aliases were created for the container alice, bob and router). Then execute netcat `nc -6 fd9f:7fa1:4256::bb 19` to reach out for chargen over IPv6 which is running on bob:
 ```

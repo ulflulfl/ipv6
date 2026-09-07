@@ -4,7 +4,7 @@ name: Markdown linkcheck
 
 on:
   push:
-  workflow_dispatch: {} # This enables the force-run button!
+  workflow_dispatch: # This enables the force-run button!
 
 jobs:
   markdown-link-check:
